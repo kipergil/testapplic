@@ -151,38 +151,32 @@
   ol.complaints li span{color:#5c584c;font-size:15px}
 
   /* boarding pass */
-  .pass{display:grid;grid-template-columns:1fr 220px;background:#fff;border:1px solid #333;box-shadow:0 4px 16px rgba(0,0,0,.12);overflow:hidden;font-family:"Courier New", monospace;max-width:100%}
-  @media(max-width:768px){.pass{grid-template-columns:1fr;max-width:100%}}
-  .pass__main{padding:0;display:flex;flex-direction:column;background:#fff}
-  .pass__header{background:linear-gradient(90deg, #1f4f8f 0%, #153d6f 50%, #1f4f8f 100%);color:#fff;padding:20px 24px;border-bottom:4px solid #0f2847;box-shadow:0 2px 4px rgba(0,0,0,.1)}
-  .pass__airline{font-family:"Bebas Neue",sans-serif;font-size:36px;letter-spacing:.14em;font-weight:700;line-height:1;display:flex;align-items:center;gap:8px}
-  .pass__type{font-size:10px;letter-spacing:.24em;text-transform:uppercase;opacity:.95;margin-top:6px;font-weight:700;letter-spacing:.18em}
-  .pass__passenger{padding:20px 24px;background:linear-gradient(to bottom, #fafafa, #f5f5f5);border-bottom:3px dashed #999}
-  .pass__pax-name{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#777;font-weight:800;margin-bottom:8px}
-  .pass__pax-value{font-family:"Courier New", monospace;font-size:28px;letter-spacing:.04em;line-height:1.1;color:#000;font-weight:900}
-  .pass__body{padding:20px 24px;flex:1;display:flex;flex-direction:column}
-  .pass__section{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #ddd}
-  .pass__section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-  .pass__route{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin-bottom:6px;background:#f9f9f9;padding:14px;border-radius:4px}
-  .pass__route-item{display:flex;flex-direction:column;gap:2px;align-items:center}
-  .pass__airport{font-size:26px;font-weight:900;letter-spacing:.08em;color:#000}
-  .pass__city{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#555;margin-top:1px}
-  .pass__arrow{text-align:center;color:#1f4f8f;font-size:24px;font-weight:900}
-  .pass__info-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:12px}
-  .pass__info-row.col2{grid-template-columns:1fr 1fr}
-  .pass__info-row.full{grid-template-columns:1fr}
-  .pass__field{display:flex;flex-direction:column;gap:5px}
-  .pass__field-label{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:#888;font-weight:800}
-  .pass__field-value{font-size:15px;letter-spacing:.02em;color:#000;font-weight:900;line-height:1.1}
-  .pass__footer-text{font-size:7px;color:#888;line-height:1.5;margin-top:auto;padding-top:12px;border-top:1px dashed #ddd}
-  .pass__stub{border-left:3px dashed #999;background:linear-gradient(to bottom, #f0f4f8, #e8ecf0);padding:16px 12px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center}
-  @media(max-width:768px){.pass__stub{border-left:0;border-top:3px dashed #999;flex-direction:row;justify-content:center;gap:12px;padding:14px 12px}}
-  .pass__stub-destination{font-family:"Bebas Neue",sans-serif;font-size:26px;line-height:.9;letter-spacing:.06em;font-weight:900;color:#1f4f8f}
-  .pass__stub-label{font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:#666;font-weight:800;margin-top:2px}
-  .pass__stub-info{display:flex;flex-direction:column;gap:8px;width:100%;margin-top:8px}
-  .pass__qrcode{width:100%;height:80px;background:linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);background-size:4px 4px;background-position:0 0, 2px 2px;margin:6px 0;border:1px solid #333}
-  .pass__barcode{height:40px;background:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 2px,#000 2px 3px,transparent 3px 5px,#000 5px 6px,transparent 6px 9px);margin:6px 0;border:1px solid #333}
-  .pass__ref{font-size:6px;letter-spacing:.12em;font-weight:800;color:#555;margin-top:4px;line-height:1.3}
+  .pass{background:#fff;border:2px solid #333;box-shadow:8px 8px 0 rgba(0,0,0,.1);overflow:hidden;display:grid;grid-template-columns:2fr 1fr;margin-top:26px}
+  @media(max-width:700px){.pass{grid-template-columns:1fr}}
+  .pass__main{border-right:3px dashed #333;padding:28px}
+  @media(max-width:700px){.pass__main{border-right:none;border-bottom:3px dashed #333}}
+  .pass__header{background:#1f4f8f;color:#fff;padding:16px;border-radius:0;margin:-28px -28px 24px -28px}
+  .pass__airline{font-family:"Bebas Neue",sans-serif;font-size:40px;letter-spacing:.12em;font-weight:700}
+  .pass__type{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px;opacity:.9}
+  .pass__passenger{margin-bottom:24px;padding-bottom:24px;border-bottom:2px solid #ddd}
+  .pass__pax-name{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#666;font-weight:700;margin-bottom:6px}
+  .pass__pax-value{font-family:monospace;font-size:32px;letter-spacing:.04em;font-weight:900;color:#000}
+  .pass__route{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #ddd}
+  .pass__route-item{text-align:center}
+  .pass__airport{font-size:28px;font-weight:900;letter-spacing:.06em}
+  .pass__city{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-top:2px}
+  .pass__arrow{font-size:20px;font-weight:700;color:#1f4f8f}
+  .pass__info{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .pass__field{margin-bottom:14px}
+  .pass__field-label{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:3px}
+  .pass__field-value{font-size:16px;font-weight:900;color:#000;font-family:monospace}
+  .pass__footer{font-size:8px;color:#888;line-height:1.4;margin-top:16px;padding-top:16px;border-top:1px dashed #ddd}
+  .pass__stub{padding:20px 16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#f5f5f5}
+  @media(max-width:700px){.pass__stub{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
+  .pass__stub-title{font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:.1em;font-weight:700;color:#1f4f8f;margin-bottom:8px}
+  .pass__stub-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:12px}
+  .pass__barcode{width:100%;height:50px;background:repeating-linear-gradient(90deg,#000 0 2px,transparent 2px 4px,#000 4px 6px,transparent 6px 9px);border:1px solid #333;margin-bottom:8px}
+  .pass__ref{font-size:7px;letter-spacing:.1em;font-weight:700;color:#555}
 
   /* excuse generator */
   .excuse{min-height:96px;display:grid;place-items:center;text-align:center;font-family:"Playfair Display",Georgia,serif;font-size:clamp(19px,3vw,27px);line-height:1.35;padding:14px;background:#fff8e6;border:2.5px dashed var(--ochre);border-radius:14px}
@@ -329,95 +323,60 @@
 <section id="bilet" style="background:var(--paper2)">
   <div class="wrap">
     <h2>Dönüş Bileti</h2>
-    <div class=”pass” style=”margin-top:26px”>
+    <div class=”pass”>
       <div class=”pass__main”>
         <div class=”pass__header”>
           <div class=”pass__airline”>✈ PEGASUS</div>
           <div class=”pass__type”>Boarding Pass</div>
         </div>
         <div class=”pass__passenger”>
-          <div class=”pass__pax-name”>Passenger</div>
+          <div class=”pass__pax-name”>Passenger Name</div>
           <div class=”pass__pax-value”>BETTY</div>
         </div>
-        <div class=”pass__body”>
-          <div class=”pass__section”>
-            <div class=”pass__route”>
-              <div class=”pass__route-item”>
-                <div class=”pass__airport”>SVQ</div>
-                <div class=”pass__city”>Seville</div>
-              </div>
-              <div class=”pass__arrow”>→</div>
-              <div class=”pass__route-item”>
-                <div class=”pass__airport”>SAW</div>
-                <div class=”pass__city”>Istanbul</div>
-              </div>
-            </div>
+        <div class=”pass__route”>
+          <div class=”pass__route-item”>
+            <div class=”pass__airport”>SVQ</div>
+            <div class=”pass__city”>Seville</div>
           </div>
-          <div class=”pass__section”>
-            <div class=”pass__info-row”>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Flight</span>
-                <span class=”pass__field-value”>PGT30XR</span>
-              </div>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Boarding</span>
-                <span class=”pass__field-value”>01</span>
-              </div>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Class</span>
-                <span class=”pass__field-value”>Y</span>
-              </div>
-            </div>
-            <div class=”pass__info-row col2”>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Date</span>
-                <span class=”pass__field-value”>30 JUL</span>
-              </div>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Boarding Time</span>
-                <span class=”pass__field-value”>15:30</span>
-              </div>
-            </div>
-            <div class=”pass__info-row col2”>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Departure</span>
-                <span class=”pass__field-value”>15:45</span>
-              </div>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Arrival</span>
-                <span class=”pass__field-value”>21:00</span>
-              </div>
-            </div>
-            <div class=”pass__info-row col2”>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Seat</span>
-                <span class=”pass__field-value”>1A</span>
-              </div>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Gate</span>
-                <span class=”pass__field-value”>14</span>
-              </div>
-            </div>
-            <div class=”pass__info-row full”>
-              <div class=”pass__field”>
-                <span class=”pass__field-label”>Aircraft / Tail Number</span>
-                <span class=”pass__field-value”>A321-251NX • TC-RFU</span>
-              </div>
-            </div>
+          <div class=”pass__arrow”>→</div>
+          <div class=”pass__route-item”>
+            <div class=”pass__airport”>SAW</div>
+            <div class=”pass__city”>Istanbul</div>
           </div>
-          <div class=”pass__footer-text”>✓ Check in 24 hours before departure • Bring all documents • Gate closes 15 minutes before departure • Mandatory return to Serdivan/Sakarya</div>
         </div>
+        <div class=”pass__info”>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Flight</div>
+            <div class=”pass__field-value”>PGT30XR</div>
+          </div>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Date</div>
+            <div class=”pass__field-value”>30 JUL 26</div>
+          </div>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Departure</div>
+            <div class=”pass__field-value”>15:45</div>
+          </div>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Arrival</div>
+            <div class=”pass__field-value”>21:00</div>
+          </div>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Seat</div>
+            <div class=”pass__field-value”>1A</div>
+          </div>
+          <div class=”pass__field”>
+            <div class=”pass__field-label”>Gate</div>
+            <div class=”pass__field-value”>N'OLUR</div>
+          </div>
+        </div>
+        <div class=”pass__footer”>Mandatory return to Serdivan/Sakarya required. Non-transferable. No refunds.</div>
       </div>
       <div class=”pass__stub”>
-        <div>
-          <div class=”pass__stub-destination”>SERDİVAN</div>
-          <div class=”pass__stub-label”>Varış Noktası</div>
-        </div>
-        <div class=”pass__stub-info”>
-          <div class=”pass__barcode” aria-hidden=”true”></div>
-          <div class=”pass__qrcode” aria-hidden=”true”></div>
-          <div class=”pass__ref”>PGT30XR/001<br>30JUL/15:45<br>SVQ→SAW</div>
-        </div>
+        <div class=”pass__stub-title”>SERDİVAN</div>
+        <div class=”pass__stub-label”>Destination</div>
+        <div class=”pass__barcode” aria-hidden=”true”></div>
+        <div class=”pass__ref”>PGT30XR-001<br>30JUL/15:45</div>
       </div>
     </div>
   </div>
