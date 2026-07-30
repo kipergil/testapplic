@@ -151,23 +151,121 @@
   ol.complaints li span{color:#5c584c;font-size:15px}
 
   /* ticket */
-  .ticket-box{background:#fff;border:3px solid #000;margin-top:26px;padding:0}
-  .ticket-top{background:#1f4f8f;color:#fff;padding:20px;margin:0}
-  .ticket-airline{font-family:"Bebas Neue",sans-serif;font-size:32px;font-weight:700;letter-spacing:.1em}
-  .ticket-type{font-size:10px;margin-top:3px;text-transform:uppercase;letter-spacing:.08em}
-  .ticket-content{padding:24px}
-  .ticket-name{font-size:11px;color:#666;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-  .ticket-value{font-size:28px;font-weight:900;color:#000;font-family:monospace;margin-bottom:20px}
-  .ticket-route{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:20px;border-bottom:2px solid #ddd}
-  .ticket-city{text-align:center}
-  .ticket-city-code{font-size:24px;font-weight:900;color:#000}
-  .ticket-city-name{font-size:9px;color:#666;margin-top:4px;text-transform:uppercase}
-  .ticket-arrow{font-size:18px;color:#1f4f8f}
-  .ticket-info{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-  .ticket-detail{padding-bottom:12px;border-bottom:1px solid #eee}
-  .ticket-detail-label{font-size:7px;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-  .ticket-detail-text{font-size:14px;font-weight:900;color:#000;font-family:monospace;margin-top:4px}
-  .ticket-footer{font-size:7px;color:#999;line-height:1.6;border-top:1px dashed #ccc;padding-top:12px;margin-top:12px}
+  .ticket-box {
+    background: white;
+    border: 3px solid black;
+    margin-top: 26px;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .ticket-top {
+    background: #1f4f8f;
+    color: white;
+    padding: 20px;
+    margin: 0;
+  }
+  .ticket-airline {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0;
+    display: block;
+  }
+  .ticket-type {
+    font-size: 10px;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+  }
+  .ticket-content {
+    padding: 24px;
+    display: block;
+  }
+  .ticket-name {
+    font-size: 11px;
+    color: #666;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 6px 0;
+  }
+  .ticket-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: black;
+    font-family: monospace;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .ticket-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+  }
+  .ticket-city {
+    text-align: center;
+    flex: 1;
+  }
+  .ticket-city-code {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    display: block;
+  }
+  .ticket-city-name {
+    font-size: 9px;
+    color: #666;
+    margin-top: 4px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .ticket-arrow {
+    font-size: 18px;
+    color: #1f4f8f;
+    padding: 0 12px;
+  }
+  .ticket-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .ticket-detail {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .ticket-detail-label {
+    font-size: 7px;
+    color: #999;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+  }
+  .ticket-detail-text {
+    font-size: 14px;
+    font-weight: 900;
+    color: black;
+    font-family: monospace;
+    margin-top: 4px;
+    display: block;
+  }
+  .ticket-footer {
+    font-size: 7px;
+    color: #999;
+    line-height: 1.6;
+    border-top: 1px dashed #ccc;
+    padding-top: 12px;
+    margin-top: 12px;
+    display: block;
+  }
 
   /* excuse generator */
   .excuse{min-height:96px;display:grid;place-items:center;text-align:center;font-family:"Playfair Display",Georgia,serif;font-size:clamp(19px,3vw,27px);line-height:1.35;padding:14px;background:#fff8e6;border:2.5px dashed var(--ochre);border-radius:14px}
