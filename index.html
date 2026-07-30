@@ -58,12 +58,15 @@
   }
 
   /* ---------- ticker ---------- */
-  .ticker{background:var(--terra);color:#fff5e6;overflow:hidden;border-bottom:3px solid var(--terra-dark);position:sticky;top:0;z-index:50}
-  .ticker__track{display:flex;gap:0;white-space:nowrap;animation:slide 26s linear infinite;will-change:transform}
-  .ticker span{font-family:"Bebas Neue",sans-serif;font-size:20px;letter-spacing:.14em;padding:8px 0}
-  .ticker span i{opacity:.6;font-style:normal;padding:0 18px}
-  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker{background:linear-gradient(90deg, var(--terra) 0%, #d45f35 50%, var(--terra) 100%);color:#fff5e6;overflow:hidden;border-bottom:4px solid var(--terra-dark);position:sticky;top:0;z-index:50;box-shadow:0 4px 12px rgba(27,26,23,.25);padding:14px 0;position:relative}
+  .ticker__track{display:flex;gap:0;white-space:nowrap;animation:marquee 18s linear infinite;will-change:transform}
+  .ticker span{font-family:"Bebas Neue",sans-serif;font-size:24px;letter-spacing:.16em;padding:4px 0;font-weight:700;text-transform:uppercase;display:inline-block}
+  .ticker span i{opacity:.5;font-style:normal;padding:0 28px;font-size:26px}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){.ticker__track{animation:none}}
+  .ticker::before,.ticker::after{content:'';position:absolute;top:0;width:80px;height:100%;pointer-events:none;z-index:10}
+  .ticker::before{left:0;background:linear-gradient(90deg, var(--terra) 0%, rgba(200,80,42,.3) 100%)}
+  .ticker::after{right:0;background:linear-gradient(90deg, rgba(200,80,42,.3) 0%, var(--terra) 100%)}
 
   /* ---------- hero ---------- */
   .hero{padding-top:clamp(30px,5vw,60px);background:
