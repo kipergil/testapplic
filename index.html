@@ -151,10 +151,9 @@
   ol.complaints li span{color:#5c584c;font-size:15px}
 
   /* boarding pass */
-  #bilet{display:none}
-  .pass{background:#fff;border:2px solid #333;box-shadow:8px 8px 0 rgba(0,0,0,.1);overflow:hidden;display:grid;grid-template-columns:2fr 1fr;margin-top:26px}
+  .pass{background:#fff;border:2px solid #333;box-shadow:8px 8px 0 rgba(0,0,0,.1);overflow:hidden;display:grid;grid-template-columns:2fr 1fr;margin-top:26px;width:100%}
   @media(max-width:700px){.pass{grid-template-columns:1fr}}
-  .pass__main{border-right:3px dashed #333;padding:28px}
+  .pass__main{border-right:3px dashed #333;padding:28px;min-width:0}
   @media(max-width:700px){.pass__main{border-right:none;border-bottom:3px dashed #333}}
   .pass__header{background:#1f4f8f;color:#fff;padding:16px;border-radius:0;margin:-28px -28px 24px -28px}
   .pass__airline{font-family:"Bebas Neue",sans-serif;font-size:40px;letter-spacing:.12em;font-weight:700}
@@ -172,7 +171,7 @@
   .pass__field-label{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:3px}
   .pass__field-value{font-size:16px;font-weight:900;color:#000;font-family:monospace}
   .pass__footer{font-size:8px;color:#888;line-height:1.4;margin-top:16px;padding-top:16px;border-top:1px dashed #ddd}
-  .pass__stub{padding:20px 16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#f5f5f5}
+  .pass__stub{padding:20px 16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#f5f5f5;min-width:0}
   @media(max-width:700px){.pass__stub{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
   .pass__stub-title{font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:.1em;font-weight:700;color:#1f4f8f;margin-bottom:8px}
   .pass__stub-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:12px}
