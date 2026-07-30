@@ -150,121 +150,107 @@
   ol.complaints li b{display:block}
   ol.complaints li span{color:#5c584c;font-size:15px}
 
-  /* ticket */
-  .ticket-box {
+  /* boarding pass ticket */
+  .bp-ticket {
     background: white;
-    border: 3px solid black;
-    margin-top: 26px;
+    border: 2px solid #333;
+    margin: 40px 0;
     padding: 0;
-    width: 100%;
-    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.15);
+    display: block;
   }
-  .ticket-top {
-    background: #1f4f8f;
+  .bp-header {
+    background: linear-gradient(135deg, #1f4f8f 0%, #2d5fa3 100%);
     color: white;
-    padding: 20px;
-    margin: 0;
-  }
-  .ticket-airline {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    margin: 0;
-    display: block;
-  }
-  .ticket-type {
-    font-size: 10px;
-    margin-top: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    display: block;
-  }
-  .ticket-content {
-    padding: 24px;
-    display: block;
-  }
-  .ticket-name {
-    font-size: 11px;
-    color: #666;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: block;
-    margin: 0 0 6px 0;
-  }
-  .ticket-value {
-    font-size: 28px;
-    font-weight: 900;
-    color: black;
-    font-family: monospace;
-    margin-bottom: 20px;
-    display: block;
-  }
-  .ticket-route {
+    padding: 18px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #333;
+  }
+  .bp-airline {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+  .bp-logo {
+    font-size: 36px;
+  }
+  .bp-body {
+    padding: 20px 24px;
+    display: block;
+  }
+  .bp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
     margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ddd;
   }
-  .ticket-city {
-    text-align: center;
-    flex: 1;
+  .bp-row.full {
+    grid-template-columns: 1fr;
   }
-  .ticket-city-code {
-    font-size: 24px;
+  .bp-field {
+    display: block;
+  }
+  .bp-label {
+    font-size: 8px;
+    color: #666;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .bp-value {
+    font-family: "Courier New", monospace;
+    font-size: 18px;
     font-weight: 900;
     color: black;
     display: block;
+    line-height: 1.2;
   }
-  .ticket-city-name {
-    font-size: 9px;
+  .bp-name-value {
+    font-size: 24px;
+  }
+  .bp-route {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    margin: 24px 0;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  .bp-airport {
+    text-align: center;
+  }
+  .bp-code {
+    font-size: 40px;
+    font-weight: 900;
+    color: #1f4f8f;
+  }
+  .bp-city {
+    font-size: 10px;
     color: #666;
     margin-top: 4px;
     text-transform: uppercase;
-    display: block;
   }
-  .ticket-arrow {
-    font-size: 18px;
-    color: #1f4f8f;
-    padding: 0 12px;
+  .bp-arrow {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
   }
-  .ticket-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .ticket-detail {
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
-  }
-  .ticket-detail-label {
+  .bp-footer {
     font-size: 7px;
-    color: #999;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    display: block;
-  }
-  .ticket-detail-text {
-    font-size: 14px;
-    font-weight: 900;
-    color: black;
-    font-family: monospace;
-    margin-top: 4px;
-    display: block;
-  }
-  .ticket-footer {
-    font-size: 7px;
-    color: #999;
-    line-height: 1.6;
+    color: #888;
+    margin-top: 16px;
+    padding-top: 16px;
     border-top: 1px dashed #ccc;
-    padding-top: 12px;
-    margin-top: 12px;
-    display: block;
+    line-height: 1.5;
   }
 
   /* excuse generator */
@@ -408,63 +394,6 @@
   </div>
 </section>
 
-<!-- ===== BİLET ===== -->
-<section id=”bilet” style=”background:var(--paper2);display:block;visibility:visible”>
-  <div class=”wrap”>
-    <h2>Dönüş Bileti</h2>
-    <div class=”ticket-box” style=”display:block;visibility:visible;width:100%;background:#fff;border:3px solid #000;margin-top:26px;padding:0”>
-      <div class=”ticket-top” style=”display:block;background:#1f4f8f;color:#fff;padding:20px”>
-        <div class=”ticket-airline” style=”display:block;font-family:'Bebas Neue',sans-serif;font-size:32px;font-weight:700”>✈ PEGASUS</div>
-        <div class=”ticket-type” style=”display:block;font-size:10px;margin-top:3px;text-transform:uppercase”>Boarding Pass</div>
-      </div>
-      <div class=”ticket-content” style=”display:block;padding:24px”>
-        <div class=”ticket-name” style=”display:block;font-size:11px;color:#666;font-weight:700;text-transform:uppercase”>Passenger</div>
-        <div class=”ticket-value” style=”display:block;font-size:28px;font-weight:900;color:#000;margin-bottom:20px”>BETTY</div>
-
-        <div class=”ticket-route” style=”display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:20px;border-bottom:2px solid #ddd”>
-          <div class=”ticket-city”>
-            <div class=”ticket-city-code”>SVQ</div>
-            <div class=”ticket-city-name”>Seville</div>
-          </div>
-          <div class=”ticket-arrow”>→</div>
-          <div class=”ticket-city”>
-            <div class=”ticket-city-code”>SAW</div>
-            <div class=”ticket-city-name”>Istanbul</div>
-          </div>
-        </div>
-
-        <div class=”ticket-info”>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Flight</div>
-            <div class=”ticket-detail-text”>PGT30XR</div>
-          </div>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Date</div>
-            <div class=”ticket-detail-text”>30 JUL 26</div>
-          </div>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Departure</div>
-            <div class=”ticket-detail-text”>15:45</div>
-          </div>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Arrival</div>
-            <div class=”ticket-detail-text”>21:00</div>
-          </div>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Seat</div>
-            <div class=”ticket-detail-text”>1A</div>
-          </div>
-          <div class=”ticket-detail”>
-            <div class=”ticket-detail-label”>Gate</div>
-            <div class=”ticket-detail-text”>N'OLUR</div>
-          </div>
-        </div>
-
-        <div class=”ticket-footer”>Mandatory return to Serdivan/Sakarya required. Non-transferable. No refunds.</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== BAHANE ===== -->
 <section>
@@ -489,6 +418,75 @@
       <details><summary>İmzam bir işe yarar mı?</summary><p>Hukuken hayır. Duygusal olarak fena baskı.</p></details>
       <details><summary>Ya bir hafta daha kalırsa?</summary><p>O zaman bu sayfaya ikinci bölüm eklenir. Kimse bunu istemiyor.</p></details>
       <details><summary>Ne getirmesi gerekiyor?</summary><p>Antika saat, Endülüs çini kitapları, yelpaze, bol fotoğraf ve anlatacak en az on iki hikâye. Zeytinyağı opsiyonel ama beklentiler yüksek.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOARDING PASS ===== -->
+<section style="background:var(--paper2);padding:60px 0">
+  <div class="wrap" style="display:flex;justify-content:center">
+    <div class="bp-ticket">
+      <div class="bp-header">
+        <div>
+          <div class="bp-airline">✈ PEGASUS</div>
+        </div>
+        <div style="text-align:right;font-size:12px;font-weight:700">BOARDING<br>PASS</div>
+      </div>
+      <div class="bp-body">
+        <div class="bp-row full">
+          <div class="bp-field">
+            <div class="bp-label">Passenger Name</div>
+            <div class="bp-value bp-name-value">BETTY</div>
+          </div>
+        </div>
+
+        <div class="bp-route">
+          <div class="bp-airport">
+            <div class="bp-code">SVQ</div>
+            <div class="bp-city">Seville</div>
+          </div>
+          <div class="bp-arrow">→</div>
+          <div class="bp-airport">
+            <div class="bp-code">SAW</div>
+            <div class="bp-city">Istanbul</div>
+          </div>
+        </div>
+
+        <div class="bp-row">
+          <div class="bp-field">
+            <div class="bp-label">Flight Number</div>
+            <div class="bp-value">PGT30XR</div>
+          </div>
+          <div class="bp-field">
+            <div class="bp-label">Date</div>
+            <div class="bp-value">30 JUL 26</div>
+          </div>
+        </div>
+
+        <div class="bp-row">
+          <div class="bp-field">
+            <div class="bp-label">Departure</div>
+            <div class="bp-value">15:45</div>
+          </div>
+          <div class="bp-field">
+            <div class="bp-label">Arrival</div>
+            <div class="bp-value">21:00</div>
+          </div>
+        </div>
+
+        <div class="bp-row">
+          <div class="bp-field">
+            <div class="bp-label">Seat</div>
+            <div class="bp-value">1A</div>
+          </div>
+          <div class="bp-field">
+            <div class="bp-label">Gate</div>
+            <div class="bp-value">N'OLUR</div>
+          </div>
+        </div>
+
+        <div class="bp-footer">Mandatory return to Serdivan/Sakarya required. Non-transferable. No refunds. Effective immediately.</div>
+      </div>
     </div>
   </div>
 </section>
